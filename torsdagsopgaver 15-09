@@ -1,0 +1,208 @@
+Task 1
+
+//1A
+Task 1
+
+void setup() {
+  {
+
+//1B
+
+println ("");
+  }
+//error "voids methods cannot return a value"
+
+
+//1C
+
+  String str = "We did it";
+
+  println ("We did it");
+}
+
+//1D
+
+{
+  
+String name = "Martin"; 
+int age = 22;
+
+println("My name is " + name + " and my age is " + age); }
+
+
+Opgave 3.
+
+//Student
+
+class Student {
+  String name;
+  int age;
+  boolean isFemale;
+  String datamatikerTeam;
+
+   // constructor
+public Student(String name, int age, boolean isFemale, String datamatikerTeam) {
+    this.name = name;
+    this.age = age;
+    this.isFemale = isFemale;
+    this.datamatikerTeam = datamatikerTeam;
+println(this);
+}
+}
+
+//Teacher
+
+class Teacher {
+  String name;
+  int age;
+  boolean isFemale;
+
+   // constructor
+public Teacher(String name, int age, boolean isFemale) {
+    this.name = name;
+    this.age = age;
+    this.isFemale = isFemale;
+println(this);
+}
+}
+
+//Datamatiker
+
+  Student Martin = new Student("Martin", 22, false, "Hold B");
+  Student Philg = new Student("Phillip", 30, false, "Hold B");
+  Teacher Jörg = new Teacher("Jörg",18, false);
+void setup() {
+  println(Jörg.name);
+  println(Martin.name, Martin.datamatikerTeam);
+  println(Philg.name, Philg.datamatikerTeam);
+}
+
+
+Task 4
+
+// 4A
+
+int[] numbers = {3, 4, 1, 5, 2};
+
+String[] names = {"Philip, Rasmus, Martin"};
+
+String isThisCorrect = "";
+
+
+
+
+void setup() {
+  printStrArr(names);
+
+  numberssum(numbers);
+  
+  numbersmedian(numbers);
+}
+
+//4B
+
+void printStrArr(String[]array) {
+  for (int i = 0; i < array.length; i++) {
+    println (array[i]);
+  }
+}
+
+//4C
+
+
+void numberssum(int[]array) {
+  int sum = 0;
+  for (int i = 0; i < array.length; i++) {
+    sum += array[i];
+  }
+  println(sum);
+
+//4D
+
+}
+
+void numbersmedian(int[]array) {
+  int sum = 0;
+  for (int i = 0; i < array.length; i++) {
+    sum += array[i];
+  }
+  println(sum/array.length);
+}
+
+
+
+Opgave 5
+
+Student [] students = new Student [10];
+
+//5.a
+void setup() {
+  
+  students[0] = new Student("student0", 10, true, "true");
+  students[1] = new Student("student1", 12, true, "true");
+  students[2] = new Student("student2", 14, true, "true");
+  students[3] = new Student("student3", 16, true, "true");
+  students[4] = new Student("student4", 18, true, "true");
+  students[5] = new Student("student5", 20, true, "true");
+  students[6] = new Student("student6", 22, true, "true");
+  students[7] = new Student("student7", 24, true, "true");
+  students[8] = new Student("student8", 26, true, "true");
+  students[9] = new Student("student9", 28, true, "true");
+  
+    printNameofStudent(students,5);
+    int result = findIndex(students,"student7"); 
+    println(result);
+    
+}
+
+//5.b
+void printNameofStudent(Student[] array, int index) {
+  for (int i = 0; i < array.length; i++) {
+    if (i == index) {
+    println(i);
+    }
+  }
+}
+//5.c
+int findIndex(Student[] array, String name) {
+  for (int i = 0; i < array.length; i++) {
+    if (array[i].name == name) {
+      return i;
+    }
+    
+}
+return -1;
+}
+
+
+Task 6
+
+/*
+ *
+ * Hvis du kører programmet får du en række fejl.
+ * Fix programmet så det kan køre og
+ * outputtet bliver:
+ * "7 is the smallest!"
+ *
+ * 
+ */
+
+  void setup() {
+    int a = 7, b = 7;
+    minimum(a,b);
+
+    }
+
+  void minimum(int a, int b) {
+    if (a < b) {
+     println(a+"is the smallest!");
+     
+        }else if (a == b) {
+     
+         println("both numbers are equal");
+          
+    } else {
+    println(b+"is the smallest!");
+    }
+    return;
+  }
